@@ -1,0 +1,24 @@
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <span class="label label-primary pull-right">
+            {{chartData.date_range.start_date  | momentDateLabel: chartData.date_range.end_date}}
+        </span>
+        <h5>{{chartData.title}}</h5>
+    </div>
+    <div class="ibox-content">
+        <div class="row">
+            <div class="col-xs-4" ng-repeat="element  in  chartData.dataList">
+                <div class="cursorHover" ng-click="toggleMaximizedChart($index)">
+                    <small class="stats-label underliningfx{{$parent.chartData.id}}" id="label{{$parent.chartData.id}}{{$index}}" >{{element.label}}</small>
+                    <h4 class="nomargin">{{parseNumber(element)}}</h4>
+                </div>
+                <div class="bottom-margin">
+                    <span id ="sparkLine{{$parent.chartData.id}}{{$index}}" class="dynamicsparkline"></span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <canvas id="{{chartData.id}}MaximizedChart"></canvas>
+    </div>
+
+</div>
