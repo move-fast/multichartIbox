@@ -9,6 +9,7 @@
   ],
   "dependencies": {
     "angular": "~1.4.9",
-    "angular-chart.js": "~1.0.3"
+    "angular-chart.js": "~1.0.3",
+    "jquery.sparkline": "https://github.com/move-fast/jquery.sparkline.git#a4443e80183e5fbaab82657ba98ea55156e9117e"
   }
 }
