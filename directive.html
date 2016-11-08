@@ -7,7 +7,7 @@
     </div>
     <div class="ibox-content">
         <div class="row">
-            <div class="col-xs-4" ng-repeat="element  in  chartData.dataList">
+            <div class="col-xs-4" style="min-height:103px" ng-repeat="element  in  chartData.dataList">
                 <div class="cursorHover" ng-click="toggleMaximizedChart($index)">
                     <small class="stats-label underliningfx{{$parent.chartData.id}}" id="label{{$parent.chartData.id}}{{$index}}" >{{element.label}}</small>
                     <h4 class="nomargin">{{parseNumber(element)}}</h4>
